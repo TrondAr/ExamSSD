@@ -1,0 +1,8 @@
+flask
+flask-session
+argon2-cffi
+flask-wtf
+flask-limiter
+flask-mail
+--- IGNORE ---
+python-dotenv

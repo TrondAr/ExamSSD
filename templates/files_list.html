@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><body>
+  <h1>Health records</h1>
+  <table border="1" cellpadding="6">
+    <tr><th>ID</th><th>Owner</th><th>Original Name</th><th>Size</th><th>When</th><th>Action</th></tr>
+    {% for f in files %}
+      <tr>
+        <td>{{ f.id }}</td>
+        <td>{{ f.owner_user_id }}</td>
+        <td>{{ f.original_filename }}</td>
+        <td>{{ f.size_bytes }}</td>
+        <td>{{ f.created_at }}</td>
+        <td><a href="{{ url_for('files.download', file_id=f.id) }}">Download</a></td>
+      </tr>
+    {% endfor %}
+  </table>
+  <p><a href="{{ url_for('files.upload') }}">Upload another</a></p>
+</body></html>

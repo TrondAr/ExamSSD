@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Patient Dashboard</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+</head>
+<body>
+    <h1>Welcome, you are now logged in as {{ user.email }}</h1>
+    <p>This is your dashboard where you can manage your health records.</p>
+    <ul>
+        <li>
+            <a href="/files/upload">Upload New Health Record</a>
+        </li>
+        <li>
+            <a href="/files_list">View Health Records</a>
+        </li>
+        <li>
+            <a href="/logout">Logout</a>
+        </li>
+    </ul>
+</body>
+</html>
